@@ -1,0 +1,216 @@
+.item-page {
+    max-width: 1540px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.item-content {
+    display: flex;
+    gap: 40px;
+    margin-top: 25px;
+}
+
+.item-picture {
+    width: 50%;
+}
+
+.item-image {
+    padding-top: 20px;
+}
+
+.item-information {
+    width: 50%;
+}
+
+.item-information__item-name {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.item-information__brand-name {
+    font-size: 16px;
+}
+
+.item-information__price-mark {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-information__price-price {
+    font-size: 28px;
+}
+
+.item-information__price-tax {
+    font-size: 22px;
+}
+
+.reaction-area {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.reaction-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reaction-icon {
+    font-size: 30px;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.reaction-count {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.like-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.liked {
+    color: red;
+}
+
+.purchase-button {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    margin: 7px 0;
+    background-color: #ff5555;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sold-text {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    margin: 7px 0;
+    background-color: #ddd;
+    color: #5f5f5f;
+    font-size: 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.item-detail__title, .item-data__title {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.item-detail__content {
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+.item-data__content {
+    display: flex;
+    padding: 5px 0;
+}
+
+.item-data__subtitle {
+    width: 25%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-data__category {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.item-data__category-name {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: #d9d9d9;
+    border-radius: 16px;
+    padding: 1px 12px;
+    white-space: nowrap;
+}
+
+.item-data__condition {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+.item-data__title-comment {
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px 0;
+    color: #5f5f5f;
+}
+
+.comment-item {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 8px;
+}
+
+.comment-profile__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(229, 229, 229, 0.5);
+    background-size: cover;
+    background-position: center;
+}
+
+.comment-profile__name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.comment-content {
+    background-color: rgba(229, 229, 229, 0.5);
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.comment-form__title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.comment-form {
+    width: 100%;
+    border: 1px solid #5f5f5f;
+    border-radius: 3px;
+}
+
+.comment-form__submit {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #ff5555;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+}
