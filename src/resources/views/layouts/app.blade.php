@@ -18,6 +18,12 @@
             <a href="/">
                 <img class="header-logo" src="{{ asset('img/logo.svg') }}" alt="COACHTECH">
             </a>
+
+            <form class="search-form" method="GET" action="{{ url('/') }}">
+                @csrf
+                <input class="search-form__input" type="text" name="keyword" value="{{ request('keyword') }}" placeholder="なにをお探しですか？">
+            </form>
+
             <ul class="header-nav">
                 @if(Auth::check())
                     <li class="header-nav__item">

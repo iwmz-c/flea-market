@@ -5,6 +5,12 @@
     justify-content: space-between;
 }
 
+.search-form__input {
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
 .header-nav {
     display: flex;
     list-style-type: none;

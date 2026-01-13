@@ -11,10 +11,25 @@ use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
-    public function index() {
-        $items = Item::with('purchase')->get();
-        
-        return view('index');
+    public function index(Request $request)
+    {
+        $keyword = $request->keyword;
+
+        $items = Item::query()
+            ->when($keyword, function ($query) use ($keyword) {
+                $query->where('name', 'like', '%' . $keyword . '%');
+            });
+
+        if ($request->tab === 'mylist') {
+            $items->whereHas('favorites', function ($q) {
+                $q->where('user_id', auth()->id());
+            });
+        }
+
+        return view('index', [
+            'items' => $items->get(),
+            'keyword' => $keyword,
+        ]);
     }
 
     public function sell() {

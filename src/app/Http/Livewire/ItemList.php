@@ -9,9 +9,11 @@ use Illuminate\Support\Facades\Auth;
 class ItemList extends Component
 {
     public $tab = 'recommend';
+    public $keyword = '';
 
     protected $queryString = [
-        'tab' => ['except' => 'recommend']
+        'tab' => ['except' => 'recommend'],
+        'keyword' => ['except' => ''],
     ];
 
     public function setTab($tab)
@@ -27,6 +29,9 @@ class ItemList extends Component
             $items =Item::when($userId, function ($query) use ($userId) {
                 $query->where('user_id', '!=', $userId);
             })
+            ->when($this->keyword, function ($query) {
+                $query->where('name', 'like', '%' . $this->keyword . '%');
+            })
             ->latest()->get();
         }
 
@@ -35,7 +40,11 @@ class ItemList extends Component
                 $items =collect();
             } else {
                 $items = Item::whereIn('id',
-                Auth::user()->favorites()->pluck('item_id'))->latest()->get();
+                Auth::user()->favorites()->pluck('item_id'))
+                ->when($this->keyword, function ($query) {
+                    $query->where('name', 'like', '%' . $this->keyword . '%');
+                })
+                ->latest()->get();
             }
         }
 
