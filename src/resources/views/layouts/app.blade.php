@@ -15,36 +15,42 @@
 <body>
     <div class="app">
         <header class="header">
-            <a href="/">
-                <img class="header-logo" src="{{ asset('img/logo.svg') }}" alt="COACHTECH">
-            </a>
+            <div class="header-left">
+                <a href="/">
+                    <img class="header-logo" src="{{ asset('img/logo.svg') }}" alt="COACHTECH">
+                </a>
+            </div>
 
-            <form class="search-form" method="GET" action="{{ url('/') }}">
-                @csrf
-                <input class="search-form__input" type="text" name="keyword" value="{{ request('keyword') }}" placeholder="なにをお探しですか？">
-            </form>
+            <div class="header-center">
+                <form class="search-form" method="GET" action="{{ url('/') }}">
+                    @csrf
+                    <input class="search-form__input" type="text" name="keyword" value="{{ request('keyword') }}" placeholder="なにをお探しですか？">
+                </form>
+            </div>
 
-            <ul class="header-nav">
-                @if(Auth::check())
+            <div class="header-right">
+                <ul class="header-nav">
+                    @if(Auth::check())
+                        <li class="header-nav__item">
+                            <form class="form" action="/logout" method="post">
+                                @csrf
+                                <button class="header-nav__button">ログアウト</button>
+                            </form>
+                        </li>
+                    @else
+                        <li class="header-nav__item">
+                            <a class="header-nav__link" href="/login">ログイン</a>
+                        </li>
+                    @endif
+
                     <li class="header-nav__item">
-                        <form class="form" action="/logout" method="post">
-                            @csrf
-                            <button class="header-nav__button">ログアウト</button>
-                        </form>
+                        <a class="header-nav__link" href="/mypage">マイページ</a>
                     </li>
-                @else
                     <li class="header-nav__item">
-                        <a class="header-nav__link" href="/login">ログイン</a>
+                        <a class="header-nav__link--sell" href="/sell">出品</a>
                     </li>
-                @endif
-
-                <li class="header-nav__item">
-                    <a class="header-nav__link" href="/mypage">マイページ</a>
-                </li>
-                <li class="header-nav__item">
-                    <a class="header-nav__link--sell" href="/sell">出品</a>
-                </li>
-            </ul>
+                </ul>
+            </div>
             @yield('nav')
         </header>
         <div class="content">

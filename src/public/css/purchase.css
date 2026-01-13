@@ -20,6 +20,14 @@
     height: fit-content;
 }
 
+@media (max-width: 850px) {
+    .purchase-content {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+}
+
 .item-data {
     display: flex;
     border-bottom: 1px solid #000;

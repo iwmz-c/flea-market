@@ -33,7 +33,7 @@
         <form wire:submit.prevent="submit">
             <textarea class="comment-form" wire:model.defer="content"></textarea>
             @error('content')
-                <p>{{ $message }}</p>
+                <p class="comment-form__error-message">{{ $message }}</p>
             @enderror
             <button class="comment-form__submit" type="submit">コメントを送信する</button>
         </form>

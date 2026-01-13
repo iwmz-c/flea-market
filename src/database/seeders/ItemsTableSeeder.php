@@ -26,6 +26,7 @@ public function run()
                 'price' => 15000,
                 'detail' => 'スタイリッシュなデザインのメンズ腕時計',
                 'condition_id' => 1,
+                'item_image_path' => 'items/Clock.jpg',
             ],
             [
                 'name' => 'HDD',
@@ -33,6 +34,7 @@ public function run()
                 'price' => 5000,
                 'detail' => '高速で信頼性の高いハードディスク',
                 'condition_id' => 2,
+                'item_image_path' => 'items/HDD.jpg',
             ],
             [
                 'name' => '玉ねぎ3束',
@@ -40,6 +42,7 @@ public function run()
                 'price' => 300,
                 'detail' => '新鮮な玉ねぎ3束のセット',
                 'condition_id' => 3,
+                'item_image_path' => 'items/onion.jpg',
             ],
             [
                 'name' => '革靴',
@@ -47,6 +50,7 @@ public function run()
                 'price' => 4000,
                 'detail' => 'クラシックなデザインの革靴',
                 'condition_id' => 4,
+                'item_image_path' => 'items/LeatherShoes.jpg',
             ],
             [
                 'name' => 'ノートPC',
@@ -54,6 +58,7 @@ public function run()
                 'price' => 45000,
                 'detail' => '高性能なノートパソコン',
                 'condition_id' => 1,
+                'item_image_path' => 'items/Laptop.jpg',
             ],
             [
                 'name' => 'マイク',
@@ -61,6 +66,7 @@ public function run()
                 'price' => 8000,
                 'detail' => '高音質のレコーディング用マイク',
                 'condition_id' => 2,
+                'item_image_path' => 'items/MusicMic.jpg',
             ],
             [
                 'name' => 'ショルダーバッグ',
@@ -68,6 +74,7 @@ public function run()
                 'price' => 3500,
                 'detail' => 'おしゃれなショルダーバッグ',
                 'condition_id' => 3,
+                'item_image_path' => 'items/bag.jpg',
             ],
             [
                 'name' => 'タンブラー',
@@ -75,6 +82,7 @@ public function run()
                 'price' => 500,
                 'detail' => '使いやすいタンブラー',
                 'condition_id' => 4,
+                'item_image_path' => 'items/Tumbler.jpg',
             ],
             [
                 'name' => 'コーヒーミル',
@@ -82,6 +90,7 @@ public function run()
                 'price' => 4000,
                 'detail' => '手動のコーヒーミル',
                 'condition_id' => 1,
+                'item_image_path' => 'items/CoffeeGrinder.jpg',
             ],
             [
                 'name' => 'メイクセット',
@@ -89,6 +98,7 @@ public function run()
                 'price' => 2500,
                 'detail' => '便利なメイクアップセット',
                 'condition_id' => 2,
+                'item_image_path' => 'items/cosmeset.jpg',
             ],
         ];
 
@@ -100,7 +110,7 @@ public function run()
                 'price' => $item['price'],
                 'detail' => $item['detail'],
                 'condition_id' => $item['condition_id'],
-                'item_image_path' => 'items/dummy.jpg',
+                'item_image_path' => $item['item_image_path'],
             ]);
         }
     }

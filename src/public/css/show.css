@@ -10,16 +10,29 @@
     margin-top: 25px;
 }
 
-.item-picture {
-    width: 50%;
+.item-picture, .item-information {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 850px) {
+    .item-content {
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .item-picture,
+    .item-information {
+        width: 95%;
+    }
 }
 
 .item-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     padding-top: 20px;
-}
-
-.item-information {
-    width: 50%;
 }
 
 .item-information__item-name {
@@ -213,4 +226,8 @@
     border-radius: 3px;
     font-weight: bold;
     text-align: center;
+}
+
+.comment-form__error-message {
+    color: #ff5555;
 }
