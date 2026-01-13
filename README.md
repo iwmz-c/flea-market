@@ -35,6 +35,7 @@ php artisan db:seed
 - Laravel 8.83.8
 - MySQL 8.0.26
 - JavaScript
+- Stripe Checkout
 - Docker / Docker Compose
 
 ## ER図
@@ -44,3 +45,12 @@ php artisan db:seed
 - トップページ：http://localhost/
 - ユーザー登録：http://localhost/register
 - phpMyAdmin：http://localhost:8080/
+
+## Stripe決済機能について
+本アプリでは、商品購入時の決済に Stripe Checkout を利用しています。
+ユーザーが選択した支払い方法に応じて、Stripeの決済画面へ遷移します。
+- .env に追記する
+```bash
+STRIPE_KEY=pk_test_xxxxx
+STRIPE_SECRET=sk_test_xxxxx
+```

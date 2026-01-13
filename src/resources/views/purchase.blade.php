@@ -7,7 +7,7 @@
 
 @section('content')
 <div class="purchase-page">
-    <form class="purchase-form" action="{{ route('purchase.store', $item) }}" method="POST">
+    <form class="purchase-form" action="{{ route('purchase.checkout', $item) }}" method="POST">
     @csrf
         <div class="purchase-content">
             <div class="purchase-left">
@@ -74,8 +74,8 @@
                 </table>
 
                 <button type="submit">購入する</button>
+                
             </div>
-
         </div>
     </form>
 </div>

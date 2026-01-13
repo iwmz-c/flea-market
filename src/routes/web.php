@@ -19,8 +19,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/sell', [ItemController::class,'sell'])->name('sell');
     Route::post('/sell', [ItemController::class, 'store'])->name('sell.store');
     Route::get('/purchase/{item}', [PurchaseController::class, 'show'])->name('purchase.show');
-    Route::post('/purchase/{item}', [PurchaseController::class, 'store'])
-    ->name('purchase.store');
+    Route::post('/purchase/checkout/{item}', [PurchaseController::class, 'checkout'])->name('purchase.checkout');
+    Route::get('/purchase/success/{item}', [PurchaseController::class, 'success'])->name('purchase.success');
+    Route::get('/purchase/cancel/{item}', [PurchaseController::class, 'cancel'])->name('purchase.cancel');
     Route::get('/purchase/address/{item}', [AddressController::class, 'edit'])->name('purchase.address.edit');
     Route::post('/purchase/address/{item}', [AddressController::class, 'update'])->name('purchase.address.update');
     Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
