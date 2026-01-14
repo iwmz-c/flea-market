@@ -75,12 +75,6 @@
     margin-bottom: 25px;
 }
 
-.payment_method__select {
-    border: 1px solid #5f5f5f;
-    border-radius: 3px;
-    margin-left: 20px;
-}
-
 .select-wrapper {
     position: relative;
     width: 100%;
@@ -101,17 +95,6 @@
     background-color: #B1B1B1;
     color: #EAEAEA;
     padding: 10px 28px;
-}
-
-.payment_method__select option:checked {
-    background-color: #8f8f8f;
-    color: #ffffff;
-    font-weight: bold;
-
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M1 7l3 3 7-7' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: 6px center;
-    background-size: 14px 14px;
 }
 
 .payment_method__select {

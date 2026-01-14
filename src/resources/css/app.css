@@ -17,8 +17,6 @@
 }
 
 .item-card {
-    /*@apply flex flex-col;
-    padding: 15px;*/
     @apply p-4;
 }
 
