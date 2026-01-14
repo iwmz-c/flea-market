@@ -14,6 +14,15 @@
 ``` bash
 cp .env.example .env
 ```
+- .env を以下のように修正する
+```bash
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=laravel_user
+DB_PASSWORD=laravel_pass
+```
 
 4. アプリケーションキーの作成
 ```bash
