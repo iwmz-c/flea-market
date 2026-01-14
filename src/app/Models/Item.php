@@ -2,12 +2,18 @@
 
 namespace App\Models;
 
+use Database\Factories\ItemFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
     use HasFactory;
+
+    protected static function newFactory()
+    {
+        return ItemFactory::new();
+    }
 
     protected $fillable = ['user_id', 'name', 'brand_name', 'price', 'condition_id', 'item_image_path', 'detail',];
 
